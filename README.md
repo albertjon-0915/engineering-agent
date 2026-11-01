@@ -1,0 +1,55 @@
+# engineering-agent
+
+A specialized AI engineering agent for hardware and software design. Powered by **Inception Mercury-3**, a diffusion-based large language model.
+
+---
+
+## What This Agent Does
+
+### Hardware / Electronics
+- **Circuit review** — power trees, MCUs, sensors, interfaces, and protection (ESD, reverse polarity, inrush, decoupling)
+- **Pinouts & wiring** — ESP32 / Arduino / Raspberry Pi / RP2040 / STM32 and similar; connector pinouts, harnesses, and signal-integrity notes
+- **PCB guidance** — footprint selection, net naming, ERC/DRC readiness, hierarchy, and JLCPCB fab handoff (Gerbers, CPL, BOM)
+- **BOM & parts** — LCSC-friendly bills of materials with manufacturer PNs, LCSC numbers, packages, quantities, alternates, and stock/lead-time flags
+- **Power & safety** — budgets, regulators, level shifting, battery charging/protection (DW01 etc.), fuel gauging
+
+### Software / Firmware
+- **Full-stack engineering** — React / Node / TypeScript, Python tooling, APIs, browser UI, tests, CI/CD, refactors
+- **Embedded firmware** — C/C++ for ESP32 / Arduino / RP2040 / STM32, with compile verification against the target board package
+- **Code <-> hardware cross-check** — pins, I2C addresses, baud rates, and constants in code are matched against wiring tables exactly
+
+### Documentation
+- Hardware guides, assembly notes, test procedures, and revision history
+- Software READMEs, architecture notes, and API docs
+
+---
+
+## Working Style
+
+- **Plan first, then confirm** — for build tasks, a plan is presented before any files are created or commands run; one approval gate, then execution
+- **Documentation-first** — pinouts, registers, and driver APIs are checked against official/datasheet sources or local project files before answering; sources are cited
+- **Verification before done** — firmware is compiled for the correct board target; software runs lint/typecheck/build/test; power budgets and ERC checklists are run on every design
+- **Honest limits** — static review catches design errors but cannot replace bench testing; every hardware design ships with a smoke-test procedure
+
+## Conventions
+
+| Deliverable | Format |
+|---|---|
+| BOM | XLSX (preferred) or CSV |
+| Documentation | PDF or DOCX (not Markdown/plain text) |
+| Diagrams | SVG (hand-authored) or ASCII in chat |
+| Schematics | Not generated (design review / pinout / BOM level only) |
+
+- **Parts**: LCSC/JLCPCB-stocked components preferred; BOM entries include reference designator, quantity, value, package, manufacturer PN, LCSC number, and notes.
+- **Projects**: cost estimates follow a fixed 3-column XLSX structure (ITEM | PRICE | REMARKS) with materials, labor, and inclusions sections.
+
+## Safety & Standards
+
+- Mains, Li-ion, and high-current designs are flagged with required protections.
+- Applicable standards (CE, FCC, UL) are noted where certification review is needed; compliance is never claimed without verification.
+
+---
+
+## License
+
+Private / user-owned repository. See commit history for details.
