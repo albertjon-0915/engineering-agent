@@ -1,5 +1,5 @@
 {
-  "name": "engineering-agent",
+  "name": "@alaric_0915/engineering-agent",
   "version": "1.0.0",
   "description": "Installable engineering agent for opencode, Claude Code, and Codex — hardware + software engineering specialist (circuit review, pinouts, PCB guidance, BOMs, embedded firmware, full-stack apps).",
   "type": "module",
