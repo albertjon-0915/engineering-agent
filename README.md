@@ -1,10 +1,52 @@
 # engineering-agent
 
-A specialized AI engineering agent for hardware and software design.
+A specialized AI engineering agent for hardware and software design. Powered by **Inception Mercury-3** (model ID: `openrouter/inception/mercury-3`).
 
 ---
 
-## What This Agent Does
+## What's in this repo
+
+| File | Purpose |
+|---|---|
+| `AGENT.md` | The complete agent definition — identity, responsibilities, workflows, methodologies, standards, and the full verification checklist |
+| `.opencode/agent/engineering-agent.md` | The same definition packaged as a loadable **opencode agent** (drop-in, selectable via `@engineering-agent`) |
+| `package.json` + `scripts/install.mjs` | Installer — copies the agent into any project via `npx` |
+| `README.md` | This file |
+
+## Installation (npx)
+
+The repo is an npm package with a `bin` entry. Install the agent into any project with:
+
+```bash
+# from inside this repo (local test)
+npx .
+
+# from GitHub (requires repo access — public, or SSH/HTTPS auth)
+npx github:albertjon-0915/engineering-agent
+
+# after publishing to npm (remove "private": true and npm publish)
+npx engineering-agent
+```
+
+Options and examples:
+
+```bash
+npx engineering-agent                    # install into current directory
+npx engineering-agent ../my-app          # install into a specific project
+npx engineering-agent --force            # overwrite existing files
+npx engineering-agent --help             # usage
+```
+
+What gets installed:
+
+- `.opencode/agent/engineering-agent.md` — the opencode agent
+- `AGENT.md` — the canonical spec
+
+**After installing: quit and restart opencode**, then select the `engineering-agent` agent. Existing files are skipped unless `--force` is passed.
+
+---
+
+## What the agent does
 
 ### Hardware / Electronics
 - **Circuit review** — power trees, MCUs, sensors, interfaces, and protection (ESD, reverse polarity, inrush, decoupling)

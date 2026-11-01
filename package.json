@@ -1,0 +1,30 @@
+{
+  "name": "engineering-agent",
+  "version": "1.0.0",
+  "description": "Installable engineering agent for opencode — hardware + software engineering specialist (circuit review, pinouts, PCB guidance, BOMs, embedded firmware, full-stack apps).",
+  "type": "module",
+  "bin": {
+    "engineering-agent": "./scripts/install.mjs"
+  },
+  "files": [
+    "AGENT.md",
+    ".opencode",
+    "scripts",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "opencode",
+    "agent",
+    "engineering",
+    "hardware",
+    "embedded",
+    "esp32",
+    "bom",
+    "jlcpcb"
+  ],
+  "license": "UNLICENSED",
+  "private": true
+}
