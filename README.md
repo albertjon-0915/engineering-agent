@@ -1,6 +1,6 @@
 # engineering-agent
 
-A specialized AI engineering agent for hardware and software design. Powered by **Inception Mercury-3**, a diffusion-based large language model.
+A specialized AI engineering agent for hardware and software design.
 
 ---
 
