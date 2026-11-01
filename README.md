@@ -1,4 +1,4 @@
-# @alaric_0915/engineering-agent
+# engineering-agent
 
 A specialized AI engineering agent for hardware and software design.
 
@@ -11,7 +11,7 @@ A specialized AI engineering agent for hardware and software design.
 | `AGENT.md` | The complete agent definition — identity, responsibilities, workflows, methodologies, standards, and the full verification checklist |
 | `.opencode/agent/engineering-agent.md` | The same definition packaged as a loadable **opencode agent** (drop-in, selectable via `@engineering-agent`) |
 | `.claude/agents/engineering-agent.md` | The same definition as a **Claude Code** subagent |
-| `.codex/agents/engineering-agent.toml` + `AGENTS.md` | The same definition as a **Codex** custom agent + project instructions |
+| `.codex/agents/engineering-agent.toml` | The same definition as a **Codex** custom agent |
 | `package.json` + `scripts/install.mjs` | Installer — copies the agent into any project via `npx` |
 | `README.md` | This file |
 
@@ -23,31 +23,30 @@ The repo is an npm package with a `bin` entry. Install the agent into any projec
 # from inside this repo (local test)
 npx .
 
-# from GitHub (requires repo access — public, or SSH/HTTPS auth)
-npx github:albertjon-0915/engineering-agent
-
-# from npm (scoped package, no org required)
-npx @alaric_0915/engineering-agent
+# from npm
+npx engineering-agent
 ```
 
 Options and examples:
 
 ```bash
-npx @alaric_0915/engineering-agent                    # install into current directory
-npx @alaric_0915/engineering-agent ../my-app          # install into a specific project
-npx @alaric_0915/engineering-agent --force            # overwrite existing files
-npx @alaric_0915/engineering-agent --help             # usage
+npx engineering-agent                     # install into current directory
+npx engineering-agent ../my-app           # install into a specific project
+npx engineering-agent --force             # overwrite existing files
+npx engineering-agent --help              # usage
 ```
 
 What gets installed:
 
-- `.opencode/agent/engineering-agent.md` — the opencode agent
-- `.claude/agents/engineering-agent.md` — the Claude Code agent
-- `.codex/agents/engineering-agent.toml` — the Codex custom agent
-- `AGENTS.md` — Codex project instructions
+- `.opencode/agent/engineering-agent.md` — the opencode agent (when .opencode detected)
+- `.claude/agents/engineering-agent.md` — the Claude Code agent (when .claude detected)
+- `.codex/agents/engineering-agent.toml` — the Codex custom agent (when .codex detected)
+- `AGENTS.md` — project instructions for Codex (alias to AGENT.md, only when .codex detected)
 - `AGENT.md` — the canonical spec
 
 **After installing: restart your AI tool** (opencode, Claude Code, or Codex) so it picks up the new agent files. Existing files are skipped unless `--force` is passed.
+
+The installer **auto-detects** which AI tools are present in your project and only installs agents for those. If no tool folders are found, it installs to all three.
 
 ---
 
