@@ -1,14 +1,17 @@
 {
   "name": "engineering-agent",
   "version": "1.0.0",
-  "description": "Installable engineering agent for opencode — hardware + software engineering specialist (circuit review, pinouts, PCB guidance, BOMs, embedded firmware, full-stack apps).",
+  "description": "Installable engineering agent for opencode, Claude Code, and Codex — hardware + software engineering specialist (circuit review, pinouts, PCB guidance, BOMs, embedded firmware, full-stack apps).",
   "type": "module",
   "bin": {
     "engineering-agent": "./scripts/install.mjs"
   },
   "files": [
     "AGENT.md",
+    "AGENTS.md",
     ".opencode",
+    ".claude",
+    ".codex",
     "scripts",
     "README.md"
   ],
@@ -17,6 +20,8 @@
   },
   "keywords": [
     "opencode",
+    "claude-code",
+    "codex",
     "agent",
     "engineering",
     "hardware",
@@ -25,6 +30,11 @@
     "bom",
     "jlcpcb"
   ],
-  "license": "UNLICENSED",
-  "private": true
+  "license": "MIT",
+  "author": "Albert Jon Inciong <albert.jon.inciong.0915@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/albertjon-0915/engineering-agent.git"
+  },
+  "homepage": "https://github.com/albertjon-0915/engineering-agent"
 }
