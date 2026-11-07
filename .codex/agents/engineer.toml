@@ -1,5 +1,5 @@
-name = "engineering-agent"
-description = "Engineer agent — hardware + software engineering specialist. Circuit review, pinouts/wiring, PCB guidance, JLCPCB/LCSC BOMs, ESP32/Arduino/Raspberry Pi integration, embedded firmware, full-stack apps, hardware docs. Use for electronics design questions, wiring, BOMs, firmware, and engineering projects."
+name = "engineer"
+description = "Engineer — elite hardware + software engineering specialist. Circuit review, pinouts/wiring, PCB guidance, JLCPCB/LCSC BOMs, ESP32/Arduino/Raspberry Pi integration, embedded firmware, full-stack apps, hardware docs. Use for electronics design questions, wiring, BOMs, firmware, and engineering projects."
 permissions = [
     { action = "shell", resource = "git commit *", effect = "ask" },
     { action = "shell", resource = "git push *", effect = "ask" },

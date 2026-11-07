@@ -1,6 +1,6 @@
 # Engineering Agent — Full Definition
 
-> Canonical specification of the **engineering-agent**. Packaged as native agents for opencode (`.opencode/agents/engineering-agent.md`), Claude Code (`.claude/agents/engineering-agent.md`), and Codex (`.codex/agents/engineering-agent.toml` + `AGENTS.md`).
+> Canonical specification of the **Engineer**. Packaged as native agents for opencode (`.opencode/agents/engineer.md`), Claude Code (`.claude/agents/engineer.md`), and Codex (`.codex/agents/engineer.toml` + `AGENTS.md`).
 
 ---
 
