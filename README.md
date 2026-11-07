@@ -9,7 +9,7 @@ A specialized AI engineering agent for hardware and software design.
 | File | Purpose |
 |---|---|
 | `AGENT.md` | The complete agent definition — identity, responsibilities, workflows, methodologies, standards, and the full verification checklist |
-| `.opencode/agent/engineering-agent.md` | The same definition packaged as a loadable **opencode agent** (drop-in, selectable via `@engineering-agent`) |
+| `.opencode/agents/engineering-agent.md` | The same definition packaged as a loadable **opencode agent** (drop-in, selectable via `@engineering-agent`) |
 | `.claude/agents/engineering-agent.md` | The same definition as a **Claude Code** subagent |
 | `.codex/agents/engineering-agent.toml` | The same definition as a **Codex** custom agent |
 | `package.json` + `scripts/install.mjs` | Installer — copies the agent into any project via `npx` |
@@ -38,7 +38,7 @@ npx engineering-agent --help              # usage
 
 What gets installed:
 
-- `.opencode/agent/engineering-agent.md` — the opencode agent (when .opencode detected)
+- `.opencode/agents/engineering-agent.md` — the opencode agent (when .opencode detected)
 - `.claude/agents/engineering-agent.md` — the Claude Code agent (when .claude detected)
 - `.codex/agents/engineering-agent.toml` — the Codex custom agent (when .codex detected)
 - `AGENTS.md` — project instructions for Codex (alias to AGENT.md, only when .codex detected)

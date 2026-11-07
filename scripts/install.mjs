@@ -3,7 +3,7 @@
  * engineering-agent installer
  *
  * Copies the engineering agent definition into the target project:
- *   - .opencode/agent/engineering-agent.md      (opencode agent)
+ *   - .opencode/agents/engineering-agent.md      (opencode agent)
  *   - .claude/agents/engineering-agent.md       (Claude Code agent)
  *   - .codex/agents/engineering-agent.toml      (Codex agent)
  *   - AGENTS.md                                 (Codex project instructions)
@@ -17,7 +17,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const PKG_ROOT = path.resolve(__dirname, "..");
 
 const TOOLS = [
-  { dir: ".opencode", src: path.join(".opencode", "agent", "engineering-agent.md"), rel: path.join(".opencode", "agent", "engineering-agent.md") },
+  { dir: ".opencode", src: path.join(".opencode", "agents", "engineering-agent.md"), rel: path.join(".opencode", "agents", "engineering-agent.md") },
   { dir: ".claude", src: path.join(".claude", "agents", "engineering-agent.md"), rel: path.join(".claude", "agents", "engineering-agent.md") },
   { dir: ".codex", src: path.join(".codex", "agents", "engineering-agent.toml"), rel: path.join(".codex", "agents", "engineering-agent.toml") },
 ];
